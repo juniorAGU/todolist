@@ -65,7 +65,7 @@ function HandleSubmit(e){
         });
         message.classList.add("menow")
         setTimeout(()=>{
-             window.location.href = "/Amaka3/index.html"
+             window.location.href = "/index.html"
         },1500)
     }
 
