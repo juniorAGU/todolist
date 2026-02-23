@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 100dvb;
+    min-height: 100vh;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 50%;
+    height: 600px;
+    border: 2px solid rgb(163, 160, 160);
+    border-radius: 15px;
+    padding: 4px;
+}
+.sub-con{
+    width: 100%;
+    height: 85%;
+    background-color: rgb(208, 203, 196);
+    overflow-y: scroll;
+}
+.sub-con::-webkit-scrollbar{
+    width: 6px;
+    height: 5px;
+    background-color: white;
+    
+}
+.sub-con::-webkit-scrollbar-thumb {
+    background: blue; 
+    border-radius: 20px;
+}
+.add{
+    width: 100%;
+    height: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-content{
+    width: 70px;
+    height: 75px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+svg:hover{
+    transform: scale(1.1,1.1);
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    opacity: 0.8;
+}
+.overlay .add-container{
+    border: 2px solid black;
+    background-color: white;
+    width: 40%;
+    height: 400px;
+    border-radius: 15px;
+    padding: 20px;
+}
+.overlay.show {
+    display: flex;  
+}
+label{
+    display: block;
+    width: 80%;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+input{
+    margin: 15px auto;
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+textarea{
+    padding: 7px 0 0 10px;
+    margin: 15px auto;
+    display: block;
+    width: 100%;
+    height: 120px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background: 0;
+    border-radius: 10px;
+    border: 0;
+    width: 80px;
+    height: 40px;
+    color: white;
+    transition: all 0.2s linear;
+    background-color: blue;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1,1.1);
+}
+.message{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(218, 214, 214);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+
+}
+.message.menow{
+    display: flex;
+}
+.sub-message{
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    padding: 0 0 0 20px;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(200px);
+    opacity: 0.8;
+    transition: all 0.2s linear;
+    animation-name: square;
+    animation-duration: 4s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes square {
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+.place{
+    width: 100%;
+    height: 170px;
+    background-color: rgb(128, 128, 242);
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+    border-right: 4px solid red;
+    padding: 5px;
+    color: white;
+    filter: drop-shadow(2px 10px 10px  gray);
+}
+
+.name1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    p{
+        color: green;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+.btn-edits{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3px;
+}
+.no-product{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+.in-mes{
+    width: 300px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    top: 1%;
+    right: 5%;
+    transition: all 0.5s linear;
+    opacity: 0;
+    z-index: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.in-mes.showme{
+    right: 13%;
+    opacity: 1;
+}
+@media  screen and (max-width: 430px){
+    main{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .overlay .add-container{
+        width: 100%;
+    }
+    .sub-message{
+        width: 80%;
+    }
+}
